@@ -50,8 +50,8 @@ def index():
     html += '<div class="w3-container w3-padding-16" style="background-color: #013369; color: #fff"><h1>NFL Odds</h1></div><br />'
 
     now = datetime.now().strftime("%b %d %Y %H:%M")
-    footer = f'<br /><div class="w3-container w3-padding-32" style="background-color: #D50A0A; color: #fff"><h5>{now}</h5>'
-    footer += f'<p>Requests: {result[1]} of {result[2]}</p>'
+    footer = f'<br /><div class="w3-container w3-padding-16" style="background-color: #D50A0A; color: #fff">'
+    footer += f'<p>{now} -- Requests: {result[1]} of {result[2]}</p>'
     footer += '</div></body></html>'
 
     output = json2html.convert(
