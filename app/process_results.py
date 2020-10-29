@@ -48,10 +48,11 @@ class Results:
                 home_odds.append(site.odds.h2h[0])
                 away_odds.append(site.odds.h2h[1])
 
-            thisGame = Game(game.commence_time,
-                            game.teams[0], home_odds, game.teams[1], away_odds)
-            games.append(thisGame)
-            # print(thisGame)
+            if len(home_odds) > 0 and len(away_odds) > 0:
+                thisGame = Game(game.commence_time,
+                                game.teams[0], home_odds, game.teams[1], away_odds)
+                games.append(thisGame)
+                # print(thisGame)
 
         games.sort(reverse=True)
         return json.dumps(games, default=dumper)

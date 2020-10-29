@@ -51,7 +51,7 @@ def index():
 
     now = datetime.now().strftime("%b %d %Y %H:%M")
     footer = f'<br /><div class="w3-container w3-padding-16" style="background-color: #D50A0A; color: #fff">'
-    footer += f'<p>{now} -- Requests: {result[1]} of {result[2]}</p>'
+    footer += f'<p>{now} -- Requests {result[1]} and {result[2]} remaining</p>'
     footer += '</div></body></html>'
 
     output = json2html.convert(
